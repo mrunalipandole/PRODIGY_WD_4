@@ -1,0 +1,872 @@
+@import url('https://fonts.google.com/specimen/Montserrat?query=monts');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: black;
+    font-weight: 300;
+    
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    margin-top: 5px;
+    letter-spacing: .05rem;
+}
+
+#hero {
+    background-image: url(pexels-esther-234072-5690488.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+#hero::after {
+    cursor: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+
+
+
+ 
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: black;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation:  text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+
+}
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+
+}
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: crimson;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .3s ease background-color;
+}
+#hero .cta:hover{
+    color: black;
+    background-color: crimson;
+}
+#services{
+    background-color: #d9e1e9;
+    
+}
+
+#services .services{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+
+}
+#services .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+  
+    
+}
+#services .section-title span{
+    color: crimson;
+
+}
+#services .service-top p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#services .service-item{
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(456.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+#services .service-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100% );
+    opacity: .8;
+    z-index: -1;
+
+}
+#services .service-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+
+
+}
+#services .service-item p{
+    color: white;
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 100%;
+
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal 
+{
+    100%{
+        color: black;
+
+    }
+    
+}
+@keyframes text_reveal_name
+{
+    100%{
+        color: crimson;
+        font-weight: 500px;
+    }
+    
+}
+#portfolio{
+    background-color: #d9e1e9;
+    
+
+}
+
+.portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.portfolio .box-container .box{
+    height: 20rem;
+    width: 26rem;
+    border: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor:pointer;
+}
+.portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.portfolio .box-container .box:hover img{
+   transform: scale(1.2)
+   
+   
+
+
+    
+}
+
+
+#portfolio .heading{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#portfolio .heading span{
+    color: crimson;
+}
+
+
+
+
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+
+}
+#about .col-left{
+    width: 250px;
+    height: 360px;
+}
+#about .col-right{
+    width: 100%;
+
+}
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+
+}
+#about .col-left .about-img{
+    position: relative;
+    border: 5px solid white;
+    height: 100%;
+    width: 100%;
+    margin-top: 70px ;
+    
+    
+
+}
+#about .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 4px solid rgb(92, 74, 74);
+    z-index: -1;
+
+
+}
+#about .col-right .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    
+    
+
+}
+#about .col-right span{
+   
+    color: crimson;
+   
+
+}
+#about .head{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+
+
+}
+#about .head span{
+  color: crimson;
+}
+#about .layout{
+    font-size: 4rem;
+    text-align: center;
+    
+
+    
+  }
+#about .layout{
+    display: inline-block;
+    padding: 5px 10px;
+    color: black;
+    background-color: crimson;
+    border: 1px solid crimson;
+    border-radius: 10px;
+}
+#about .col-right  p span{
+    color:  #194b7d;
+    font-size: 2.5rem;
+    margin-top: 90px;
+    background-color: rgb(248, 242, 242);
+    
+}
+#about .col-right h2{
+    font-weight: 1000;
+    margin-top: 30px;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+
+
+/*chatgpt*/
+
+#about {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #d9e1e9; /* Set your desired background color for the entire background */
+    margin-top: -10px;
+}
+
+#about .col-left {
+    position: relative;
+    width: 250px;
+    height: 360px;
+}
+
+#about .col-left .about-img {
+    position: relative;
+    border: 5px solid white;
+    height: 100%;
+    width: 100%;
+    margin-top: 70px;
+    z-index: 1;
+    background-color: inherit; /* Ensure the about-img inherits the background color */
+}
+
+#about .col-left .about-img::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f0f0f0; /* Set the same background color as the parent */
+    z-index: -2; /* Ensure it is behind the ::after pseudo-element */
+}
+
+#about .col-left .about-img::after {
+    content: '';
+    position: absolute;
+    left: -33px;
+    top: 19px;
+    height: 98%;
+    width: 98%;
+    border: 4px solid rgb(92, 74, 74);
+    z-index: -1;
+}
+
+/* complete */
+
+
+
+
+
+
+
+
+
+
+
+
+#contact{
+    background-color: #d9e1e9;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.contact .row .content{
+    flex:1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+.contact .row form{
+    flex:1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+.contact .row form .box{
+    padding: 1rem;
+    margin:1rem 0;
+    background: #333;
+    color: black;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+
+}
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+
+}
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: black;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+
+
+}
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: black;
+    padding:1rem 0;
+    font-weight: normal;
+
+}
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: black;
+}
+.contact .row form{
+    margin:3rem 0;
+}
+.contact .heading{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    margin-bottom: 0%;
+    
+    
+
+}
+.contact .heading span{
+    color: crimson;
+}
+.contact .btn{
+    display: inline-block;
+    padding: 5px 10px;
+    color: black;
+    background-color: crimson;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 2.5rem;
+
+}
+
+
+
+
+#hero .logo{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: initial;
+    margin-left: 30px;
+    
+}
+#hero .logo span{
+    color: crimson;
+}
+
+
+.contain{
+    padding: 10px 10%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background: #ff004f;
+    transform: 0.5s;
+
+
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+
+@media only screen and (max-width:600px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        
+    
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-sharp{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+
+}
+
+
+nav .fa{
+    display: none;
+
+}
+
+
+
+
+
+#footer .lastsection{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 1000;
+    color: black;
+    width: 100%;
+    margin-top: 30px;
+    
+
+}
+#footer .lastsection span{
+    font-weight: 700;
+    
+}
+#footer .lastsection span i{
+    color: red;
+}
+
+#hero .contain nav{
+    font-size: 3rem;
+    text-align: left;
+    color: black;
+    margin-top: 25px;
+    margin-left: 0;
+    text-align: start;
+}
+#hero .contain nav h5 span{
+    color: crimson;
+}
+
+/* Your existing CSS */
+
+/* Hide cross icon on larger screens and show it only on smaller screens */
+@media only screen and (min-width: 601px) {
+    nav .close-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav .close-icon {
+        display: block;
+    }
+}
+
+/* Hide cross icon on larger screens */
+@media only screen and (min-width: 769px) {
+    nav .fa-circle-xmark {
+        display: none;
+    }
+}
+
+/* Show cross icon on smaller screens */
+@media only screen and (max-width: 768px) {
+    nav .fa-circle-xmark {
+        display: block;
+    }
+}
+
+
+/* Education Section*/
+#education{
+    display: flex;
+    flex-direction: column;
+    background-color: #d9e1e9;
+    background: #d9e1e9;
+    
+
+}
+#education h1{
+    margin: 60px;
+
+}
+#education .columns{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 50px;
+
+
+}
+#education .box{
+    height: 180px;
+    width: 500px;
+    background-color: rgb(81, 79, 79);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+#education .box h2{
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    font-weight: 100;
+
+
+}
+#education .box p{
+   color: #fff;
+   font-size: 1.7rem;
+   
+
+}
+
+
+
+#education .heading{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#education .heading span{
+    color: crimson;
+}
+
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    #education .columns {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+
+    #education .box {
+        width: auto;
+        height: auto;
+    }
+
+    #education h1 {
+        margin: 40px;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #education h1 {
+        margin: 20px;
+        font-size: 2.5rem;
+    }
+
+    #education .columns {
+        padding-left: 10px;
+    }
+
+    #education .box {
+        padding: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #education .box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    #education .box p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #education h1 {
+        font-size: 2rem;
+        margin: 10px;
+    }
+
+    #education .box {
+        padding: 10px;
+    }
+
+    #education .box h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    #education .box p {
+        font-size: 0.9rem;
+    }
+}
+
+
